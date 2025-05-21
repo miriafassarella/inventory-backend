@@ -2,6 +2,9 @@
 
 Ce projet est une application **backend** développée avec **Java** et le framework **Spring Boot**, utilisant **Maven** comme outil de gestion de dépendances. Le projet a pour objectif de permettre un suivi rigoureux du matériel (ordinateurs, accessoires, etc.), en facilitant l’inventaire, la mise à jour des informations et le contrôle d’accès selon le rôle des utilisateurs.
 
+🔗 **Application déployée en production (hébergement AWS) :**  
+👉 [http://3.95.208.110/login]
+
 ## ✅ Technologies utilisées
 
 - Java 17+
