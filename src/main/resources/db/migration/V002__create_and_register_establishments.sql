@@ -18,7 +18,7 @@ INSERT INTO establishment(name, enumber, id_sector) VALUES ('École Jean Moulin'
 INSERT INTO establishment(name, enumber, id_sector) VALUES ('Collège Paul Éluard', '084', 3);
 INSERT INTO establishment(name, enumber, id_sector) VALUES ('École des Étoiles', '079', 3);
 INSERT INTO establishment(name, enumber, id_sector) VALUES ('Lycée Professionnel Léonard de Vinci', '092', 3);
-INSERT INTO establishment(name, enumber, id_sector) VALUES ('Centre de services Secteur 3', '098', 3);
+INSERT INTO establishment(name, enumber, id_sector) VALUES ('Centre de services Secteur 3', '097', 3);
 
 INSERT INTO establishment(name, enumber, id_sector) VALUES ('École Horizon', '051', 1);
 INSERT INTO establishment(name, enumber, id_sector) VALUES ('Institut Saint-Benoît', '047', 1);
@@ -28,7 +28,7 @@ INSERT INTO establishment(name, enumber, id_sector) VALUES ('École Communautair
 INSERT INTO establishment(name, enumber, id_sector) VALUES ('Lycée Jacques Prévert', '058', 1);
 INSERT INTO establishment(name, enumber, id_sector) VALUES ('École Arc-en-Ciel', '063', 1);
 INSERT INTO establishment(name, enumber, id_sector) VALUES ('Collège du Centre', '055', 1);
-INSERT INTO establishment(name, enumber, id_sector) VALUES ('Centre de services Secteur 1', '099', 1);
+INSERT INTO establishment(name, enumber, id_sector) VALUES ('Centre de services Secteur 1', '078', 1);
 
 INSERT INTO establishment(name, enumber, id_sector) VALUES ('Institut de la Réussite', '016', 2);
 INSERT INTO establishment(name, enumber, id_sector) VALUES ('École Polytechnique Locale', '015', 2);
@@ -40,6 +40,6 @@ INSERT INTO establishment(name, enumber, id_sector) VALUES ('École Charles Baud
 INSERT INTO establishment(name, enumber, id_sector) VALUES ('École du Savoir', '036', 2);
 INSERT INTO establishment(name, enumber, id_sector) VALUES ('Collège François Mitterrand', '038', 2);
 INSERT INTO establishment(name, enumber, id_sector) VALUES ('École de la Liberté', '035', 2);
-INSERT INTO establishment(name, enumber, id_sector) VALUES ('Centre de services Secteur 2', '097', 2);
+INSERT INTO establishment(name, enumber, id_sector) VALUES ('Centre de services Secteur 2', '088', 2);
 
 

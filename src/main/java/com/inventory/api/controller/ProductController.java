@@ -1,12 +1,7 @@
 package com.inventory.api.controller;
-
-
 import com.inventory.api.domain.model.Product;
-
 import com.inventory.api.domain.repository.ProductRepository;
-
 import com.inventory.api.domain.repository.product.ProductFilter;
-
 import com.inventory.api.domain.service.PdfService;
 import com.inventory.api.domain.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,18 +34,22 @@ public class ProductController {
     @GetMapping("/pdf")
     @PreAuthorize("hasAuthority('ROLE_SEARCH_PRODUCT') and hasAuthority('SCOPE_read')")
     public ResponseEntity<byte[]> exportProductsToPdf(@RequestParam(required = false) Long establishmentId) {
-       byte[] pdf;
-        List<Product> products;
-        if(establishmentId != null /*|| establishmentId != 0*/){
-            products = repository.findByEstablishmentId(establishmentId);
-        }else{
-            products = repository.findAll();
-        }
-
-        pdf = pdfService.generateProductPdf(products);
+      byte[] pdf = productService.exportProductsToPdf(establishmentId);
 
         return ResponseEntity.ok()
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=products.pdf")
+                .contentType(MediaType.APPLICATION_PDF)
+                .body(pdf);
+    }
+
+
+    @GetMapping("/etiqueta/{codigo}")
+    @PreAuthorize("hasAuthority('ROLE_SEARCH_PRODUCT') and hasAuthority('SCOPE_read')")
+    public ResponseEntity<byte[]> gerarEtiqueta(@PathVariable String codigo) {
+        byte[] pdf = pdfService.gerarEtiqueta(codigo);
+
+        return ResponseEntity.ok()
+                .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=etiquette.pdf")
                 .contentType(MediaType.APPLICATION_PDF)
                 .body(pdf);
     }

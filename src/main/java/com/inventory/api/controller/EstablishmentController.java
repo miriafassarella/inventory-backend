@@ -5,6 +5,7 @@ import com.inventory.api.domain.model.Sector;
 import com.inventory.api.domain.repository.EstablishementRepository;
 
 import com.inventory.api.domain.repository.SectorRepository;
+import com.inventory.api.domain.service.EstablishmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -20,19 +21,21 @@ public class EstablishmentController {
     @Autowired
     EstablishementRepository repository;
 
+    private EstablishmentService establishmentService;
 
-    
+    public EstablishmentController(EstablishmentService establishmentService) {
+        this.establishmentService = establishmentService;
+    }
+
     @PreAuthorize("isAuthenticated()")
     @GetMapping(params = "sector")
-    public List<Establishment> listBySectors(@RequestParam Long sector){
-       return repository.findBySectorId(sector);
+    public List<Establishment> listBySectors(@RequestParam Long sector) {
+        return establishmentService.listBySectors(sector);
     }
 
     @GetMapping()
     @PreAuthorize("isAuthenticated()")
-    public List<Establishment> list(){
-        return repository.findAll();
+    public List<Establishment> list() {
+        return establishmentService.list();
     }
-
-
 }

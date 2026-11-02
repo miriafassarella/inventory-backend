@@ -18,9 +18,8 @@ CREATE TABLE person_permission (
 	FOREIGN KEY (id_permission) REFERENCES permission(id)
 );
 INSERT INTO person (id, name, mail, password) values (1, 'Administrateur', 'admin@gmail.com', '$2a$10$X607ZPhQ4EgGNaYKt3n4SONjIv9zc.VMWdEuhCuba7oLAL5IvcL5.');
-INSERT INTO person (id, name, mail, password) values (2, 'Maria Silva', 'maria@gmail.com', '$2a$10$Zc3w6HyuPOPXamaMhh.PQOXvDnEsadztbfi6/RyZWJDzimE8WQjaq');
-INSERT INTO person (id, name, mail, password) values (3, 'Miria Fassarella', 'miria@fassarella.dev', '$2a$10$31NHI9xEps83R6CvbIeml.6YRmMwBOVfvoXPcAYyTaOL8CNXlAeJO');
-INSERT INTO person (id, name, mail, password) values (4, 'Leonardo da Silva', 'leosilva@gmail.com', '$2a$10$fXTIoEyJNEcc5muRy9pl3eKwAw13IapXrNxOYkL3/sOgYF2wxIUGq');
+INSERT INTO person (id, name, mail, password) values (2, 'Miria Fassarella', 'miria@fassarella.dev', '$2a$10$31NHI9xEps83R6CvbIeml.6YRmMwBOVfvoXPcAYyTaOL8CNXlAeJO');
+
 
 
 INSERT INTO permission (id, description) values (1, 'ROLE_REGISTER_USER');
@@ -106,10 +105,8 @@ INSERT INTO person_permission (id_person, id_permission) values (1, 33);
 
 
 
--- maria
+
 INSERT INTO person_permission (id_person, id_permission) values (2, 2);
 INSERT INTO person_permission (id_person, id_permission) values (2, 5);
 INSERT INTO person_permission (id_person, id_permission) values (2, 8);
 
--- miria
-INSERT INTO person_permission (id_person, id_permission) values (3, 8);

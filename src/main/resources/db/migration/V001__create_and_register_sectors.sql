@@ -3,6 +3,6 @@ CREATE TABLE sector (
 	name VARCHAR (100) NOT NULL
 );
 
-INSERT INTO  sector (name) values ('Secteur 1');
-INSERT INTO  sector (name) values ('Secteur 2');
-INSERT INTO  sector (name) values ('Secteur 3');
+INSERT INTO  sector (name) values ('Équipe 1');
+INSERT INTO  sector (name) values ('Équipe 2');
+INSERT INTO  sector (name) values ('Équipe 3');
